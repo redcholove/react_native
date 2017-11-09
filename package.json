@@ -1,0 +1,46 @@
+{
+  "name": "nativePractice_serious",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest",
+    "build_ios": "react-native bundle --entry-file ./index.ios.js --platform ios --dev false --bundle-output ./ios/release_ios/main.jsbundle --assets-dest ./ios/release_ios/",
+    "push_android": "code-push release-react nativePractice_serious android",
+    "push_ios": "code-push release-react nativePractice_serious ios",
+    "build_android": "cd android && ./gradlew assembleRelease"
+  },
+  "dependencies": {
+    "react": "16.0.0-alpha.12",
+    "react-native": "0.46.4",
+    "react-native-auto-grow-textinput": "^1.2.1",
+    "react-native-auto-height-image": "^0.3.3",
+    "react-native-auto-scroll": "0.0.1",
+    "react-native-button": "^2.1.0",
+    "react-native-code-push": "^5.1.3-beta",
+    "react-native-cookie": "^0.2.0",
+    "react-native-elements": "^0.15.0",
+    "react-native-gifted-chat": "^0.2.5",
+    "react-native-image-crop-picker": "^0.14.4",
+    "react-native-image-picker": "^0.26.3",
+    "react-native-keyboard-aware-scroll-view": "^0.3.0",
+    "react-native-keyboard-spacer": "^0.3.1",
+    "react-native-prompt": "^1.0.0",
+    "react-native-refresh-list-view": "^1.0.5",
+    "react-native-refreshlist": "^1.0.3",
+    "react-native-search-bar": "^3.0.0",
+    "react-native-storage": "^0.2.2",
+    "react-native-vector-icons": "^4.3.0",
+    "react-navigation": "^1.0.0-beta.11",
+    "react-navigation-is-focused-hoc": "patlux/react-navigation-is-focused-hoc"
+  },
+  "devDependencies": {
+    "babel-jest": "20.0.3",
+    "babel-preset-react-native": "2.1.0",
+    "jest": "20.0.4",
+    "react-test-renderer": "16.0.0-alpha.12"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
